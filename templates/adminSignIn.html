@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Sign In Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'style.css')}}" >
+  </head>
+  <body>
+    <div id="box">
+      <form action="http://127.0.0.1:8080/adminHome" method="POST">
+      <h1>Admin Sign In</h1>
+      <input id="username" type="text" name="username" placeholder="Username" required>
+      <input id="password" type="password" name="password" placeholder="Password" required>
+      <input type="submit" name="" value="Admin Sign In">
+      </form>
+    </div>
+  </body>
+</html>

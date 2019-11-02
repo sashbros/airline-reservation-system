@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Home Page</title>
+    <script src="{{ url_for('static',filename = 'script1.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'style.css')}}" >
+  </head>
+  <body>
+    <div id="searchBox">
+      <form action="http://127.0.0.1:8080/updatedSeats" method="POST">
+        <div>
+          <h1>UPDATE AEROPLANE SEATS</h1>
+        </div>
+        <div>
+          <input id="name" type="text" name="acode" placeholder="Airplane Code" required>
+          <input id="username" type="text" name="seats" placeholder="Total Seats" required>
+        </div>
+        <div>
+          <input type="submit" name="" value="Update Seats">
+        </div>
+      </form>
+      <br><br>
+      <form action="http://127.0.0.1:8080/searchFlight" method="POST">
+        <div>
+          <h1>SEARCH FLIGHT BY BOOKING ID</h1>
+        </div>
+        <div>
+          <input id="name" type="text" name="booking_id" placeholder="Booking ID" required>
+        </div>
+        <div>
+          <input type="submit" name="" value="Search Flight">
+        </div>
+      </form>
+      <br><br><br><br><br>
+      <div id="copyright">
+        A <a target="_blank" href="https://sashbros.itch.io">Sashbros Studios</a> Production &copy;. All Rights Reserved.
+      </div>
+    </div>
+  </body>
+</html>

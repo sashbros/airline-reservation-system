@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search Flights By Booking ID</title>
+    <script src="{{ url_for('static',filename = 'script1.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'style.css')}}" >
+  </head>
+  <body>
+    <div id="searchBox">
+      {% for item in data %}
+      <form>
+          <div class="flightInfo">
+              <div><span>Full Name: </span>{{ item[0] }}</div>
+            <div><span>Flight ID: </span>{{ item[1] }}</div>
+            <div><span>Fare: </span>{{ item[2] }}</div>
+
+            <input type="submit" name="" value="Cancel">
+          </div>
+      </form>
+      {% endfor %}
+      <form action="http://127.0.0.1:8080/signout" method="POST">
+        <input class="signout" type="submit" name="" value="Sign Out">
+      </form>
+      <br><br><br><br><br>
+      <div id="copyright">
+        A <a target="_blank" href="https://sashbros.itch.io">Sashbros Studios</a> Production &copy;. All Rights Reserved.
+      </div>
+    </div>
+  </body>
+</html>

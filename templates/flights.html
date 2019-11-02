@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flights Page</title>
+    <script src="{{ url_for('static',filename = 'script1.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'style.css')}}" >
+  </head>
+  <body>
+    <div id="searchBox">
+      <div>
+        <h1>FLIGHTS ACCORDING TO YOUR SEARCH</h1>
+        {% for item in data %}
+        <form action="http://127.0.0.1:8080/booked" method="POST">
+          <div class="flightInfo">
+            <div><span>Flight ID: </span>{{ item[0] }}</div>
+            <input type="text" value="{{ item[0] }}" name="flight_id" readonly>
+            <div><span>Airplane Code: </span>{{ item[1] }}</div>
+            <input type="text" value="{{ item[1] }}" name="acode" readonly>
+            <div><span>Arrival Time: </span>{{ item[2] }}</div>
+            <div><span>Departure Time: </span>{{ item[3] }}</div>
+            <div><span>From: </span>{{ item[4] }}</div>
+            <div><span>To: </span>{{ item[5] }}</div>
+            <div><span>Class: </span>{{ item[6] }}</div>
+            <input type="text" value="{{ item[6] }}" name="class" readonly>
+            <div><span>Fare: </span>{{ item[7] }}</div>
+            <input type="text" value="{{ item[7] }}" name="fare" readonly>
+            <input type="submit" name="" value="Book">
+          </div>
+        </form>
+        {% endfor %}
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="copyright">
+          A <a target="_blank" href="https://sashbros.itch.io">Sashbros Studios</a> Production &copy;. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

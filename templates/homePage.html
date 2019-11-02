@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <script src="{{ url_for('static',filename = 'script1.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'style.css')}}" >
+  </head>
+  <body>
+    <div id="searchBox">
+      <form action="http://127.0.0.1:8080/myflights" method="POST">
+          <input class="myflights" type="submit" name="" value="My Flights">
+      </form>
+      <form action="http://127.0.0.1:8080/flights" method="POST">
+        <div>
+          <h1>Plan and<span id="bookFont"> book </span>your perfect trip</h1>
+        </div>
+        <div>
+          <input id="name" type="text" name="from" placeholder="From" required>
+          <input id="username" type="text" name="to" placeholder="To" required>
+        </div>
+        <div>
+          <input id="dob" name="depDate" placeholder="Departure Date" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" required>
+          <select id="country" name="classF" onchange="change_country(this.value)" class="frm-field required">
+            <option value="Economy">Economy</option>
+            <option value="Business">Business</option>       
+            <option value="First">First</option>  
+          </select>
+        </div>
+        <div>
+          <input type="submit" name="" value="Search Flights">
+        </div>
+      </form>
+      <form action="http://127.0.0.1:8080/signout" method="POST">
+        <input class="signout" type="submit" name="" value="Sign Out">
+      </form>
+      <br><br><br><br><br>
+      <div id="copyright">
+        A <a target="_blank" href="https://sashbros.itch.io">Sashbros Studios</a> Production &copy;. All Rights Reserved.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: candara;
+  background: #000000;
+  /* background: url(bg.jpg) no-repeat fixed; */
+}
+#box{
+  width: 900px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #00000000;
+  text-align: center;
+}
+#searchBox{
+  width: 900px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #00000000;
+  /*
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+a{
+  color: white;
+}
+#box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#bookFont{
+  color: #3498db;
+  font-size: 40px;
+}
+h4{
+  color: white;
+  text-transform: initial;
+  font-weight: 100;
+}
+#box input[type = "text"],#box input[type = "password"],#box input[type = "date"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+#searchBox input[type = "text"],#searchBox input[type = "password"],#searchBox input[type = "date"],#searchBox select{
+  border:0;
+  background: none;
+  margin: 20px 20px;
+  text-align: center;
+  border: 2px solid yellow;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 0px;
+  transition: 0.25s;
+}
+select{
+  background-color: black !important;
+}
+
+#box input[type = "text"]:focus,#box input[type = "password"]:focus,#box input[type = "date"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+#searchBox input[type = "text"]:focus,#searchBox input[type = "password"]:focus,#searchBox input[type = "date"]:focus,#searchBox select:focus{
+  width: 280px;
+  border-color: #3498db;
+}
+#box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+#otherPage{
+  color: yellow !important;
+  border: none !important;
+  padding: 5px !important;
+  border-radius: 0px !important;
+}
+#otherpage input[type = "submit"]:hover{
+  background: none !important; 
+}
+#searchBox input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #ff00ff;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+#box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+#searchBox input[type = "submit"]:hover{
+  background: #ff00ff;
+}
+.flightInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(72, 173, 255, 0.308);
+  color: white !important;
+}
+.flightInfo div{
+  margin-left: 0px;
+  font-size: 25px;
+}
+.flightInfo div span {
+  font-size: 18px;
+  color: #ffd857;
+}
+.flightInfo input[type = "submit"]{
+  border: none !important;
+  background: red !important;
+  display: block;
+  margin: 20px;
+  text-align: center;
+  padding: 14px 20px !important;
+  outline: none;
+  color: white;
+  border-radius: 0px !important;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.flightInfo input[type = "submit"]:hover{
+  background: #960000 !important;
+}
+.hideThis{
+  color: #00000000 !important;
+  font-size: 0px;
+}
+.signout{
+  border: none !important;
+}
+.signout:hover{
+  background: #00000000 !important;
+}
+#copyright{
+  color: white !important;
+}
+#copyright a{
+  text-decoration: none;
+}
+.myflights{
+  border: none !important;
+  font-size: 15px;
+  border-radius: 0px !important;
+}
+.myflights:hover{
+  background: green !important;
+}
+
+#flightInfo{
+  /* padding-left: 90px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important; */
+  margin-top: 10px !important;
+}
+.flightInfo input[type = "text"]{
+  visibility: hidden;
+  width: 0px !important;
+  height: 0px !important;
+}
